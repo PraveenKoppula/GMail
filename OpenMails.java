@@ -20,7 +20,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class OpenMails {
 	AndroidDriver<AndroidElement> driver ;
 	
-	@BeforeTest
+	@BeforeClass
     public void OpenGmailApp() throws InterruptedException, IOException
     {		
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -37,7 +37,7 @@ public class OpenMails {
 		Thread.sleep(2000);
     }
 	
-	@Test  (priority=1)
+	@Test
 	public void OpeningMail() throws InterruptedException
 	{
 		System.out.println(driver.getContext());
@@ -56,7 +56,7 @@ public class OpenMails {
 		Thread.sleep(3000);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void Close() throws InterruptedException
 	{
 		Thread.sleep(2000);

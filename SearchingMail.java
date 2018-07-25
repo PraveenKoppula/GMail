@@ -3,8 +3,8 @@ package GMail;
 import java.io.IOException;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -16,7 +16,7 @@ public class SearchingMail {
 
 	AndroidDriver<AndroidElement> driver ;	
 	
-	@BeforeTest
+	@BeforeClass
     public void OpenGmailApp() throws InterruptedException, IOException
     {		
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -42,7 +42,7 @@ public class SearchingMail {
 		Thread.sleep(2000);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void Close() throws InterruptedException
 	{
 		Thread.sleep(2000);

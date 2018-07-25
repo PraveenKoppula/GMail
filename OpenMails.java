@@ -42,7 +42,7 @@ public class OpenMails {
 		List<AndroidElement> convList = driver.findElementsByXPath("//android.support.v7.widget.RecyclerView//android.view.View//android.view.View[@index=0]");
 		System.out.println("Total count of mails appearing:" + convList.size() );
 		
-		for(int i=6; i < convList.size() ; i++)
+		for(int i=0; i < convList.size() ; i++)
 		{
 			convList.get(i).click();
 			Thread.sleep(2000);

@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -17,7 +17,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class SendingMail {
 	AndroidDriver<AndroidElement> driver ;
 	
-	@BeforeTest
+	@BeforeClass
     public void OpenGmailApp() throws InterruptedException, IOException
     {		
 		DesiredCapabilities cap = new DesiredCapabilities();
@@ -53,7 +53,7 @@ public class SendingMail {
 		Thread.sleep(2000);
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void Close() throws InterruptedException
 	{
 		Thread.sleep(2000);
